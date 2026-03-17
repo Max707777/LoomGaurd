@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# <img src="public/assets/logo.png" width="48" height="48" align="center" /> LoomGuard
 
-## Getting Started
+> **Advanced EVM Bytecode Threat Intelligence** — Track malicious smart contract developers across chains using bytecode stylometry, not just token trails.
 
-First, run the development server:
+![LoomGuard Hero](public/assets/hero.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛡️ Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+LoomGuard is a next-generation security tool designed to identify and track smart contract developers by their unique coding patterns. By analyzing EVM bytecode directly, LoomGuard can detect similarities between contracts even when they are deployed from different addresses, making it a powerful tool for threat intelligence and forensic analysis.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Bytecode Stylometry**: Analyze 256-dimensional opcode vectors to identify developer "fingerprints".
+- **Cosine Similarity Search**: Rapidly find similar contracts across multiple chains using `pgvector`.
+- **CBOR Metadata Extraction**: Automatically extract compiler versions and IPFS hashes from contract metadata.
+- **GitHub OSINT Bridge**: Automatically link contract fingerprints to potential GitHub identities.
+- **Multi-Chain Support**: Native support for Ethereum, Base, Polygon, Arbitrum, and more.
 
-## Learn More
+## 🚀 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Database**: [Supabase](https://supabase.com/) with `pgvector` for similarity search
+- **Web3**: [ethers.js v6](https://docs.ethers.org/v6/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+- Node.js 20+
+- A Supabase project with the `pgvector` extension enabled.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Max707777/LoomGaurd.git
+   cd LoomGaurd/loomguard
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file with the following:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   GITHUB_TOKEN=your_github_personal_access_token # For OSINT enrichment
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+Built with 💜 for the Ethereum Security Community.
