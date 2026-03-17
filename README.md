@@ -2,7 +2,8 @@
 
 > **Advanced EVM Bytecode Threat Intelligence** — Track malicious smart contract developers across chains using bytecode stylometry, not just token trails.
 
-![LoomGuard Hero](public/assets/hero.png)
+![LoomGuard Dashboard](public/assets/hero.jpg)
+![LoomGuard Analysis Result](public/assets/analysis.jpg)
 
 ## 🛡️ Overview
 
