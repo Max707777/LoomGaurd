@@ -2,7 +2,7 @@
 
 > **Advanced EVM Bytecode Threat Intelligence** — Track malicious smart contract developers across chains using bytecode stylometry, not just token trails.
 
-**Live Demo: [https://loomguard-manthanvaidya755-2940s-projects.vercel.app](https://loomguard-manthanvaidya755-2940s-projects.vercel.app)**
+**Live Demo: [https://loomguard-xi.vercel.app](https://loomguard-xi.vercel.app)**
 
 ## 🛡️ Overview
 
